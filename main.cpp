@@ -30,6 +30,7 @@ int main() {
 
         switch (select){
             case 1:
+                cout<<"HOLAAA";
                 carlos();
                 break;
             case 2:
