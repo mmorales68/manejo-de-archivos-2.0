@@ -7,19 +7,3 @@
 
 #endif //MANEJO_DE_ARCHIVOS_2_0_FUNCIONES_H
 #include "windows.h"
-
-void carlos(){
-
-}
-
-void julio(){
-
-}
-
-void moreno(){
-
-}
-
-void miguel(){
-
-}
