@@ -280,6 +280,7 @@ int calculadoraGTQ_USD(){
             cout << "Asegurese de estar conectado a internet e intentar nuevamente"<<endl;
         }
     }
+    system("pause");
     return 0;
 }
 
@@ -299,5 +300,6 @@ int calculadoraUSD_GTQ(){
             cout << "Asegurese de estar conectado a internet e intentar nuevamente"<<endl;
         }
     }
+    system("pause");
     return 0;
 }
