@@ -10,6 +10,9 @@
 #include "iostream"
 #include "fstream"
 #include "vector"
+#include "string"
+#include "regex"
+#include "cstdio"
 
 using namespace std;
 
@@ -224,3 +227,77 @@ public:
         outFile.close();
     }
 };
+
+
+string getGTQ_USD(){
+
+    //comando de PowerShell para descargar el contenido HTML de la URL
+    string powershellCommand = "powershell.exe -Command \"(Invoke-WebRequest -Uri 'https://www.banguat.gob.gt/tipo_cambio/').Content\"";
+
+    char buffer[128];
+    string result;
+
+    //abrir una "tuberia" al proceso de PowerShell y leer su salida
+    FILE* pipe = _popen(powershellCommand.c_str(), "r");
+    if (!pipe) {
+        cerr << "Error al abrir la tubería al proceso de PowerShell." <<endl;
+        return "";
+    }
+
+    // Leer la salida línea por línea y almacenarla en 'result'
+    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+        result += buffer;
+    }
+
+    _pclose(pipe); //cerrar la tubería
+
+    //expresión regular para encontrar el numero dentro de las etiquetas <td align="center"></td>
+    regex regexPattern(R"(<td align="center">(\d+(\.\d+)?)</td>)");
+    smatch match;
+
+    //buscar la primera coincidencia dentro del HTML obtenido
+    if (regex_search(result, match, regexPattern)) {
+
+        return match.str(1);//el primer grupo de captura contiene el número encontrado
+    }
+
+    return "";
+}
+
+int calculadoraGTQ_USD(){
+    try {
+        double precioDolar = stod(getGTQ_USD()), quetzales, resultado;
+        cout<<"Ingrese la cantidad de quetzales a convertir:  ";
+        cin >> quetzales;
+
+        resultado = quetzales / precioDolar;
+
+        cout << "Tasa de conversion en BANGUAT de GTQ a USD=" << fixed << precioDolar << endl;
+        cout << "Resultado= $ " << fixed <<resultado << endl;
+    }catch(exception& e){
+        cout << "Error: " << e.what() << endl;
+        if (string( e.what())=="stod"){
+            cout << "Asegurese de estar conectado a internet e intentar nuevamente"<<endl;
+        }
+    }
+    return 0;
+}
+
+int calculadoraUSD_GTQ(){
+    try {
+        double precioDolar = stod(getGTQ_USD()), cantidad, resultado;
+        cout<<"Ingrese la cantidad de dolares a convertir:  ";
+        cin >> cantidad;
+
+        resultado = cantidad * precioDolar;
+
+        cout << "Tasa de conversion en BANGUAT de GTQ a USD=" << fixed << precioDolar << endl;
+        cout << "Resultado= Q " << fixed << resultado << endl;
+    }catch(exception& e){
+        cout << "Error: " << e.what() << endl;
+        if (string( e.what())=="stod"){
+            cout << "Asegurese de estar conectado a internet e intentar nuevamente"<<endl;
+        }
+    }
+    return 0;
+}

@@ -7,15 +7,16 @@ using namespace std;
 int main() {
     int select;
     do{
+        system("cls");
         cout<<"---------------------------------------------------------------------------------------------"<<endl;
         cout<<"============================================================================================="<<endl;
         cout<<"||**************************************MENU***********************************************||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
-        cout<<"||     1) Funcion Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR           ||"<<endl;
+        cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR           ||"<<endl;
         cout<<"||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||"<<endl;
         cout<<"||     2) Funcion Julio:                                                                   ||"<<endl;
         cout<<"||     3) Funcion Moreno:                                                                  ||"<<endl;
-        cout<<"||     4) Funcion Miguel:                                                                  ||"<<endl;
+        cout<<"||     4) Funciones Miguel: Conversor de monedas (BANGUAT)                                 ||"<<endl;
         cout<<"||     0) Exit                                                                             ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
@@ -30,15 +31,17 @@ int main() {
 
         switch (select){
             case 1:{
+                system("cls");
                 int opcion;
                 do{
                     cout << "[1] INGRESAR A LA BASE DE DATOS." << endl;
                     cout << " [2] ENCRIPTAR/DESENCRIPTAR ARCHIVOS." << endl;
-                    cout << " [3] REGRESAR AL MENU ANTERIOR" << endl;
+                    cout << " [0] REGRESAR AL MENU ANTERIOR" << endl;
                     cout << "    QUE DESEAS HACER"<<endl;
                     cin >> opcion;
                     switch (opcion) {
                         case 1: {
+                            system("cls");
                             string usuario,password,lectura;
                             int oportunidades=3;
                             bool corte=false;
@@ -127,6 +130,7 @@ int main() {
                         }
                             break;
                         case 2: {
+                            system("cls");
                             Cryptographer cryptographer;
                             SimpleCrypt simpleCrypt;
 
@@ -152,15 +156,19 @@ int main() {
                                     break;
                                 default:
                                     cout << "Opción no válida" << endl;
+                                    system("pause");
                             }
                         }
                             break;
-                        case 3:
+                        case 0:
+                            system("cls");
                             break;
                         default:
                             cout << "OPCION INVALIDA" << endl;
+                            system("pause");
+                        break;
                     }
-                }while(opcion!=3);
+                }while(opcion!=0);
             }
                 break;
             case 2:
@@ -168,6 +176,52 @@ int main() {
             case 3:
                 break;
             case 4:
+                int selectM;
+                do{
+                    system("cls");
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"||* * * * * * * * * * * * * * * * Funciones por Miguel * * * * * * * * * * * * * * * * * * ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     1) Calculadora GTQ a USD (BANGUAT)                                                  ||"<<endl;
+                    cout<<"||     2) Calculadora USD a GTQ (BANGUAT)                                                  ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     0) Regresar al menu principal                                                       ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"SELECIONA UNA OPCION: ";
+                    cin>>selectM;
+
+                    switch (selectM){
+                        case 1:
+                            system("cls");
+                            calculadoraGTQ_USD();
+                        break;
+
+                        case 2:
+                            system("cls");
+                            calculadoraUSD_GTQ();
+                        break;
+
+                        case 0:
+                            system("cls");
+                            break;
+
+                        default:cout<<"Opcion invalida"<<endl;
+                        system("pause");
+                        break;
+                    }
+
+
+                }while(selectM!=0);
                 break;
             case 0:
                 cout<<"Saliendo del programa"<<endl;
@@ -175,6 +229,7 @@ int main() {
                 break;
             default:
                 cout<<"Opccion invalida"<<endl;
+                system("pause");
                 break;
         }
 
