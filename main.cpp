@@ -12,11 +12,11 @@ int main() {
         cout<<"============================================================================================="<<endl;
         cout<<"||**************************************MENU***********************************************||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
-        cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR           ||"<<endl;
+        cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR         ||"<<endl;
         cout<<"||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||"<<endl;
         cout<<"||     2) Funcion Julio:                                                                   ||"<<endl;
         cout<<"||     3) Funcion Moreno:                                                                  ||"<<endl;
-        cout<<"||     4) Funciones Miguel: Conversor de monedas (BANGUAT)                                 ||"<<endl;
+        cout<<"||     4) Funciones Miguel: Conversor de monedas (BANGUAT), keylogger                      ||"<<endl;
         cout<<"||     0) Exit                                                                             ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
@@ -185,7 +185,7 @@ int main() {
                     cout<<"||                                                                                         ||"<<endl;
                     cout<<"||     1) Calculadora GTQ a USD (BANGUAT)                                                  ||"<<endl;
                     cout<<"||     2) Calculadora USD a GTQ (BANGUAT)                                                  ||"<<endl;
-                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     3) Keylogger (registra las teclas pulsadas en un archivo txt)                       ||"<<endl;
                     cout<<"||                                                                                         ||"<<endl;
                     cout<<"||                                                                                         ||"<<endl;
                     cout<<"||     0) Regresar al menu principal                                                       ||"<<endl;
@@ -211,9 +211,14 @@ int main() {
                             calculadoraUSD_GTQ();
                         break;
 
+                        case 3:
+                            system("cls");
+                            keylogger();
+                        break;
+
                         case 0:
                             system("cls");
-                            break;
+                        break;
 
                         default:cout<<"Opcion invalida"<<endl;
                         system("pause");

