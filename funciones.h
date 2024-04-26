@@ -417,7 +417,7 @@ int leer_escribir_texto() {
 
     archivoSalida << "Hola, este es un archivo de texto." << endl;
     archivoSalida << "Puedes escribir lo que quieras aquí." << endl;
-
+    cout << "ingrese el texto" << endl;
     //archivoSalida.close();
 
     ifstream archivoEntrada("archivo.txt");
