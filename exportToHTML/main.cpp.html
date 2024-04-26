@@ -1,0 +1,363 @@
+<html>
+<head>
+<title>main.cpp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #b3ae60;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #2aacb8;}
+.s6 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.cpp</font>
+</center></td></tr></table>
+<pre><span class="s0">#include </span><span class="s2">&lt;iostream&gt;</span>
+<span class="s0">#include </span><span class="s2">&quot;funciones.h&quot;</span>
+
+<span class="s3">using namespace </span><span class="s1">std</span><span class="s4">;</span>
+
+
+<span class="s3">int </span><span class="s1">main</span><span class="s4">() {</span>
+    <span class="s3">int </span><span class="s1">select</span><span class="s4">;</span>
+    <span class="s3">do</span><span class="s4">{</span>
+        <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||**************************************MENU***********************************************||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     2) Funciones Julio: Leer y escribir textos, escribir lineas de texto                ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     3) Funciones Cayetano: Crear directorio, Crear archivo                              ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     4) Funciones Miguel: Conversor de monedas (BANGUAT), keylogger                      ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     0) Exit                                                                             ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;SELECIONA UNA OPCION: &quot;</span><span class="s4">;</span>
+        <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">select</span><span class="s4">;</span>
+
+        <span class="s3">switch </span><span class="s4">(</span><span class="s1">select</span><span class="s4">){</span>
+            <span class="s3">case </span><span class="s5">1</span><span class="s4">:{</span>
+                <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                <span class="s3">int </span><span class="s1">opcion</span><span class="s4">;</span>
+                <span class="s3">do</span><span class="s4">{</span>
+                    <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;[1] INGRESAR A LA BASE DE DATOS.&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot; [2] ENCRIPTAR/DESENCRIPTAR ARCHIVOS.&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot; [0] REGRESAR AL MENU ANTERIOR&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;    QUE DESEAS HACER&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cin </span><span class="s4">&gt;&gt; </span><span class="s1">opcion</span><span class="s4">;</span>
+                    <span class="s3">switch </span><span class="s4">(</span><span class="s1">opcion</span><span class="s4">) {</span>
+                        <span class="s3">case </span><span class="s5">1</span><span class="s4">: {</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">string usuario</span><span class="s4">,</span><span class="s1">password</span><span class="s4">,</span><span class="s1">lectura</span><span class="s4">;</span>
+                            <span class="s3">int </span><span class="s1">oportunidades</span><span class="s4">=</span><span class="s5">3</span><span class="s4">;</span>
+                            <span class="s3">bool </span><span class="s1">corte</span><span class="s4">=</span><span class="s3">false</span><span class="s4">;</span>
+                            <span class="s1">ifstream fi</span><span class="s4">(</span><span class="s2">&quot;password.txt&quot;</span><span class="s4">);</span>
+                            <span class="s3">if</span><span class="s4">(</span><span class="s1">fi</span><span class="s4">.</span><span class="s1">fail</span><span class="s4">()) {</span>
+                                <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;FALLO AL ABRIR EL ARCHIVO.&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                            <span class="s4">}</span><span class="s3">else</span><span class="s4">{</span>
+                                <span class="s3">while</span><span class="s4">(</span><span class="s1">oportunidades</span><span class="s4">&gt;</span><span class="s5">0</span><span class="s4">){</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;~~~~~~~~~~~~~~~~~&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot; INICIO DE SESION&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot; ~~~~~~~~~~~~~~~~~&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;NOMBRE DE USUARIO&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">usuario</span><span class="s4">;</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;CONTRASENA&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">password</span><span class="s4">;</span>
+                                    <span class="s1">oportunidades</span><span class="s4">--;</span>
+                                    <span class="s1">fi</span><span class="s4">.</span><span class="s1">seekg</span><span class="s4">(</span><span class="s5">0</span><span class="s4">);</span>
+                                    <span class="s3">while</span><span class="s4">(!</span><span class="s1">fi</span><span class="s4">.</span><span class="s1">eof</span><span class="s4">() &amp;&amp; </span><span class="s1">corte</span><span class="s4">==</span><span class="s3">false</span><span class="s4">){</span>
+                                        <span class="s1">fi</span><span class="s4">&gt;&gt;</span><span class="s1">lectura</span><span class="s4">;</span>
+                                        <span class="s3">if</span><span class="s4">(</span><span class="s1">lectura</span><span class="s4">==</span><span class="s1">usuario</span><span class="s4">){</span>
+                                            <span class="s1">fi</span><span class="s4">&gt;&gt;</span><span class="s1">lectura</span><span class="s4">;</span>
+                                            <span class="s3">if</span><span class="s4">(</span><span class="s1">lectura</span><span class="s4">==</span><span class="s1">password</span><span class="s4">) {</span>
+                                                <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;ACCESO PERMITIDO.&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                                                <span class="s1">corte </span><span class="s4">= </span><span class="s3">true</span><span class="s4">;</span>
+                                                <span class="s1">oportunidades </span><span class="s4">= </span><span class="s5">0</span><span class="s4">;</span>
+                                                <span class="s3">int </span><span class="s1">opcion </span><span class="s4">= </span><span class="s5">0</span><span class="s4">;</span>
+                                                <span class="s1">vector</span><span class="s4">&lt;</span><span class="s1">string</span><span class="s4">&gt; </span><span class="s1">vNombres</span><span class="s4">, </span><span class="s1">vApellidos</span><span class="s4">, </span><span class="s1">vTelefonos</span><span class="s4">;</span>
+<span class="s6">//MENU DE OPCIONES</span>
+                                                <span class="s3">do </span><span class="s4">{</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;***BASE DE DATOS DE CLIENTES***&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[1].AGREGAR UN NUEVO CLIENTE.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[2].BUSCAR UN CLIENTE.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[3].MODIFICAR UN CLIENTE.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[4].BORRAR UN CLIENTE.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[5].VER LISTA DE CLIENTES.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;[6].CERRAR EL PROGRAMA.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;QUE QUIERES HACER:&quot;</span><span class="s4">;</span>
+                                                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">opcion</span><span class="s4">;</span>
+                                                    <span class="s3">if </span><span class="s4">(</span><span class="s1">opcion</span><span class="s4">&lt;</span><span class="s5">1 </span><span class="s4">|| </span><span class="s1">opcion</span><span class="s4">&gt;</span><span class="s5">5</span><span class="s4">){</span>
+                                                        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;ERROR AL ELEGIR. PRUEBA DE NUEVO&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                                    <span class="s4">}</span>
+                                                    <span class="s3">switch </span><span class="s4">(</span><span class="s1">opcion</span><span class="s4">) {</span>
+                                                        <span class="s3">case </span><span class="s5">1</span><span class="s4">:{</span>
+                                                            <span class="s1">ofstream ficheroEscritura</span><span class="s4">(</span><span class="s2">&quot;clientes.txt&quot;</span><span class="s4">,</span><span class="s1">ios</span><span class="s4">::</span><span class="s1">app</span><span class="s4">);</span>
+                                                            <span class="s1">nuevoCliente</span><span class="s4">(</span><span class="s1">ficheroEscritura</span><span class="s4">);</span>
+                                                            <span class="s1">ficheroEscritura</span><span class="s4">.</span><span class="s1">close</span><span class="s4">();</span>
+                                                        <span class="s4">}</span>
+                                                            <span class="s3">break</span><span class="s4">;</span>
+                                                        <span class="s3">case </span><span class="s5">2</span><span class="s4">:{</span>
+                                                            <span class="s1">ifstream ficheroLectura</span><span class="s4">(</span><span class="s2">&quot;clientes.txt&quot;</span><span class="s4">);</span>
+                                                            <span class="s1">buscarCliente</span><span class="s4">(</span><span class="s1">ficheroLectura</span><span class="s4">);</span>
+                                                            <span class="s1">ficheroLectura</span><span class="s4">.</span><span class="s1">close</span><span class="s4">();</span>
+                                                        <span class="s4">}</span>
+                                                            <span class="s3">break</span><span class="s4">;</span>
+                                                        <span class="s3">case </span><span class="s5">3</span><span class="s4">:{</span>
+                                                            <span class="s1">ifstream ficheroLectura2</span><span class="s4">(</span><span class="s2">&quot;clientes.txt&quot;</span><span class="s4">);</span>
+                                                            <span class="s1">modificarCliente</span><span class="s4">(</span><span class="s1">vNombres</span><span class="s4">,</span><span class="s1">vApellidos</span><span class="s4">,</span><span class="s1">vTelefonos</span><span class="s4">,</span><span class="s1">ficheroLectura2</span><span class="s4">);</span>
+                                                            <span class="s1">ficheroLectura2</span><span class="s4">.</span><span class="s1">close</span><span class="s4">();</span>
+                                                        <span class="s4">}</span>
+                                                            <span class="s3">break</span><span class="s4">;</span>
+                                                        <span class="s3">case </span><span class="s5">4</span><span class="s4">:{</span>
+                                                            <span class="s1">ifstream ficheroLectura3</span><span class="s4">(</span><span class="s2">&quot;clientes.txt&quot;</span><span class="s4">);</span>
+                                                            <span class="s1">borrarCliente</span><span class="s4">(</span><span class="s1">vNombres</span><span class="s4">,</span><span class="s1">vApellidos</span><span class="s4">,</span><span class="s1">vTelefonos</span><span class="s4">,</span><span class="s1">ficheroLectura3</span><span class="s4">);</span>
+                                                            <span class="s1">ficheroLectura3</span><span class="s4">.</span><span class="s1">close</span><span class="s4">();</span>
+                                                        <span class="s4">}</span>
+                                                            <span class="s3">break</span><span class="s4">;</span>
+                                                        <span class="s3">case </span><span class="s5">5</span><span class="s4">:{</span>
+                                                            <span class="s1">leerArchivo</span><span class="s4">();</span>
+                                                        <span class="s4">}</span>
+                                                            <span class="s3">break</span><span class="s4">;</span>
+                                                    <span class="s4">}</span>
+                                                <span class="s4">}</span><span class="s3">while </span><span class="s4">(</span><span class="s1">opcion</span><span class="s4">!=</span><span class="s5">6</span><span class="s4">);</span>
+
+                                            <span class="s4">}</span>
+                                        <span class="s4">}</span>
+                                    <span class="s4">}</span>
+                                    <span class="s3">if</span><span class="s4">(!</span><span class="s1">corte</span><span class="s4">)</span>
+                                        <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;USUARIO O CONTRASENA NO VALIDOS&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                                <span class="s4">}</span>
+                                <span class="s3">if</span><span class="s4">(</span><span class="s1">oportunidades</span><span class="s4">==</span><span class="s5">0 </span><span class="s4">&amp;&amp; </span><span class="s1">corte</span><span class="s4">==</span><span class="s3">false</span><span class="s4">)</span>
+                                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;ACCESO DENEGADO.&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                            <span class="s4">}</span>
+                            <span class="s1">fi</span><span class="s4">.</span><span class="s1">close</span><span class="s4">();</span>
+
+                        <span class="s4">}</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+                        <span class="s3">case </span><span class="s5">2</span><span class="s4">: {</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">Cryptographer cryptographer</span><span class="s4">;</span>
+                            <span class="s1">SimpleCrypt simpleCrypt</span><span class="s4">;</span>
+
+                            <span class="s1">string inputFile</span><span class="s4">, </span><span class="s1">outputFile</span><span class="s4">;</span>
+                            <span class="s3">char </span><span class="s1">choice</span><span class="s4">;</span>
+
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Ingrese la ruta del archivo de entrada: &quot;</span><span class="s4">;</span>
+                            <span class="s1">cin </span><span class="s4">&gt;&gt; </span><span class="s1">inputFile</span><span class="s4">;</span>
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Ingrese la ruta del archivo de salida: &quot;</span><span class="s4">;</span>
+                            <span class="s1">cin </span><span class="s4">&gt;&gt; </span><span class="s1">outputFile</span><span class="s4">;</span>
+
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Elija una opción:</span><span class="s3">\n</span><span class="s2">&quot;</span><span class="s4">;</span>
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;1. Cifrar</span><span class="s3">\n</span><span class="s2">&quot;</span><span class="s4">;</span>
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;2. Descifrar</span><span class="s3">\n</span><span class="s2">&quot;</span><span class="s4">;</span>
+                            <span class="s1">cin </span><span class="s4">&gt;&gt; </span><span class="s1">choice</span><span class="s4">;</span>
+
+                            <span class="s3">switch </span><span class="s4">(</span><span class="s1">choice</span><span class="s4">) {</span>
+                                <span class="s3">case </span><span class="s2">'1'</span><span class="s4">:</span>
+                                    <span class="s1">cryptographer</span><span class="s4">.</span><span class="s1">encryptFile</span><span class="s4">(</span><span class="s1">inputFile</span><span class="s4">, </span><span class="s1">outputFile</span><span class="s4">, </span><span class="s1">simpleCrypt</span><span class="s4">);</span>
+                                    <span class="s3">break</span><span class="s4">;</span>
+                                <span class="s3">case </span><span class="s2">'2'</span><span class="s4">:</span>
+                                    <span class="s1">cryptographer</span><span class="s4">.</span><span class="s1">decryptFile</span><span class="s4">(</span><span class="s1">inputFile</span><span class="s4">, </span><span class="s1">outputFile</span><span class="s4">, </span><span class="s1">simpleCrypt</span><span class="s4">);</span>
+                                    <span class="s3">break</span><span class="s4">;</span>
+                                <span class="s3">default</span><span class="s4">:</span>
+                                    <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;Opción no válida&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                                    <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                            <span class="s4">}</span>
+                        <span class="s4">}</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+                        <span class="s3">case </span><span class="s5">0</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+                        <span class="s3">default</span><span class="s4">:</span>
+                            <span class="s1">cout </span><span class="s4">&lt;&lt; </span><span class="s2">&quot;OPCION INVALIDA&quot; </span><span class="s4">&lt;&lt; </span><span class="s1">endl</span><span class="s4">;</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                        <span class="s3">break</span><span class="s4">;</span>
+                    <span class="s4">}</span>
+                <span class="s4">}</span><span class="s3">while</span><span class="s4">(</span><span class="s1">opcion</span><span class="s4">!=</span><span class="s5">0</span><span class="s4">);</span>
+            <span class="s4">}</span>
+                <span class="s3">break</span><span class="s4">;</span>
+            <span class="s3">case </span><span class="s5">2</span><span class="s4">:</span>
+                <span class="s3">int </span><span class="s1">selectj</span><span class="s4">;</span>
+                <span class="s3">do </span><span class="s4">{</span>
+                    <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||* * * * * * * * * * * * * * * * Funciones por Julio  * * * * * * * * * * * * * * * * * * ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     1) Leer y escribir archivos de texto                                                ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     2) Escribir lineas de texto                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     0) Regresar al menu principal                                                       ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;SELECIONA UNA OPCION: &quot;</span><span class="s4">;</span>
+                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">selectj</span><span class="s4">;</span>
+
+                    <span class="s3">switch </span><span class="s4">(</span><span class="s1">selectj</span><span class="s4">){</span>
+                        <span class="s3">case </span><span class="s5">1</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">leer_escribir_texto</span><span class="s4">();</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">2</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">escribir_lineas</span><span class="s4">();</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">0</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">default</span><span class="s4">:</span><span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;Opcion invalida&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+                    <span class="s4">}</span>
+
+                <span class="s4">}</span><span class="s3">while </span><span class="s4">(</span><span class="s1">selectj</span><span class="s4">!=</span><span class="s5">0</span><span class="s4">);</span>
+                <span class="s3">break</span><span class="s4">;</span>
+
+            <span class="s3">case </span><span class="s5">3</span><span class="s4">:</span>
+                <span class="s3">int </span><span class="s1">selectC</span><span class="s4">;</span>
+                <span class="s3">do </span><span class="s4">{</span>
+                    <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||* * * * * * * * * * * * * * * * Funciones por Cayetano * * * * * * * * * * * * * * * * * ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     1) Crear un Directorio                                                              ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     2) Crear un Archivo                                                                 ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     0) Regresar al menu principal                                                       ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;SELECIONA UNA OPCION: &quot;</span><span class="s4">;</span>
+                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">selectC</span><span class="s4">;</span>
+
+                    <span class="s3">switch </span><span class="s4">(</span><span class="s1">selectC</span><span class="s4">){</span>
+                        <span class="s3">case </span><span class="s5">1</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">crearCarpeta</span><span class="s4">();</span>
+                        <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">2</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">crearArchivo</span><span class="s4">();</span>
+                        <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">0</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                        <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">default</span><span class="s4">:</span><span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;Opcion invalida&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                        <span class="s3">break</span><span class="s4">;</span>
+                    <span class="s4">}</span>
+
+
+
+
+                <span class="s4">}</span><span class="s3">while </span><span class="s4">(</span><span class="s1">selectC</span><span class="s4">!=</span><span class="s5">0</span><span class="s4">);</span>
+                <span class="s3">break</span><span class="s4">;</span>
+
+            <span class="s3">case </span><span class="s5">4</span><span class="s4">:</span>
+                <span class="s3">int </span><span class="s1">selectM</span><span class="s4">;</span>
+                <span class="s3">do</span><span class="s4">{</span>
+                    <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||* * * * * * * * * * * * * * * * Funciones por Miguel * * * * * * * * * * * * * * * * * * ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     1) Calculadora GTQ a USD (BANGUAT)                                                  ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     2) Calculadora USD a GTQ (BANGUAT)                                                  ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     3) Keylogger (registra las teclas pulsadas en un archivo txt)                       ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||     0) Regresar al menu principal                                                       ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;||                                                                                         ||&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;=============================================================================================&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;---------------------------------------------------------------------------------------------&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                    <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;SELECIONA UNA OPCION: &quot;</span><span class="s4">;</span>
+                    <span class="s1">cin</span><span class="s4">&gt;&gt;</span><span class="s1">selectM</span><span class="s4">;</span>
+
+                    <span class="s3">switch </span><span class="s4">(</span><span class="s1">selectM</span><span class="s4">){</span>
+                        <span class="s3">case </span><span class="s5">1</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">calculadoraGTQ_USD</span><span class="s4">();</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">2</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">calculadoraUSD_GTQ</span><span class="s4">();</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">3</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s1">keylogger</span><span class="s4">();</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">case </span><span class="s5">0</span><span class="s4">:</span>
+                            <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;cls&quot;</span><span class="s4">);</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+
+                        <span class="s3">default</span><span class="s4">:</span><span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;Opcion invalida&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                        <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                            <span class="s3">break</span><span class="s4">;</span>
+                    <span class="s4">}</span>
+
+
+                <span class="s4">}</span><span class="s3">while</span><span class="s4">(</span><span class="s1">selectM</span><span class="s4">!=</span><span class="s5">0</span><span class="s4">);</span>
+                <span class="s3">break</span><span class="s4">;</span>
+
+                <span class="s3">case </span><span class="s5">0</span><span class="s4">:</span>
+                <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;Saliendo del programa&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                <span class="s3">break</span><span class="s4">;</span>
+
+                <span class="s3">default</span><span class="s4">:</span>
+                <span class="s1">cout</span><span class="s4">&lt;&lt;</span><span class="s2">&quot;Opccion invalida&quot;</span><span class="s4">&lt;&lt;</span><span class="s1">endl</span><span class="s4">;</span>
+                <span class="s1">system</span><span class="s4">(</span><span class="s2">&quot;pause&quot;</span><span class="s4">);</span>
+                <span class="s3">break</span><span class="s4">;</span>
+        <span class="s4">}</span>
+
+    <span class="s4">} </span><span class="s3">while </span><span class="s4">(</span><span class="s1">select</span><span class="s4">!=</span><span class="s5">0</span><span class="s4">);</span>
+
+    <span class="s3">return </span><span class="s5">0</span><span class="s4">;</span>
+<span class="s4">}</span></pre>
+</body>
+</html>
