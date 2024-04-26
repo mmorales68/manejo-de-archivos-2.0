@@ -406,3 +406,79 @@ void crearArchivo(){
         cout << "Error: no se pudo abrir el archivo en el directorio especificado.\n"<< endl;
     }
 }
+
+int leer_escribir_texto() {
+    ofstream archivoSalida("archivo.txt");
+
+    if (!archivoSalida.is_open()) {
+        cout << "Error al abrir el archivo para escritura." << endl;
+        return 1;
+    }
+
+    archivoSalida << "Hola, este es un archivo de texto." << endl;
+    archivoSalida << "Puedes escribir lo que quieras aquí." << endl;
+
+    //archivoSalida.close();
+
+    ifstream archivoEntrada("archivo.txt");
+
+
+    if (!archivoEntrada.is_open()) {
+        cout << "Error al abrir el archivo para lectura." << endl;
+        return 1;
+    }
+
+    string linea;
+    cout << "Contenido del archivo:" << endl;
+    while (archivoEntrada>>linea) {
+        cout << linea << endl;
+    }
+    system("pause");
+    return 0;
+}
+
+int escribir_lineas() {
+    // Abrir un archivo para escritura
+    ofstream archivoSalida("datos.txt");
+
+    // Verificar si el archivo se abrió correctamente
+    if (!archivoSalida.is_open()) {
+        cout << "Error al abrir el archivo para escritura." << endl;
+        return 1;
+    }
+
+    // Solicitar al usuario que ingrese líneas de texto
+    cout << "Por favor, ingresa algunas líneas de texto. Escribe 'fin' para terminar." << endl;
+    string linea;
+    while (true) {
+        cin>>linea;
+        if (linea == "fin") // Terminar la entrada cuando el usuario escriba "fin"
+            break;
+        archivoSalida << linea << endl; // Escribir la línea en el archivo
+    }
+
+    // Cerrar el archivo de salida
+    archivoSalida.close();
+
+    // Abrir el archivo para lectura
+    ifstream archivoEntrada("datos.txt");
+
+    // Verificar si el archivo se abrió correctamente
+    if (!archivoEntrada.is_open()) {
+        cout << "Error al abrir el archivo para lectura." << endl;
+        return 1;
+    }
+
+    // Mostrar el contenido del archivo línea por línea
+    cout << "Contenido del archivo:" << endl;
+    while (getline(archivoEntrada, linea)) {
+        cout << linea << endl;
+    }
+
+    // Cerrar el archivo de entrada
+    archivoEntrada.close();
+
+    archivoEntrada.close();
+
+    return 0;
+}

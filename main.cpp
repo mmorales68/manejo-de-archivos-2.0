@@ -15,7 +15,7 @@ int main() {
         cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR         ||"<<endl;
         cout<<"||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
-        cout<<"||     2) Funcion Julio:                                                                   ||"<<endl;
+        cout<<"||     2) Funciones Julio: Leer y escribir textos, escribir lineas de texto                ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||     3) Funciones Cayetano: Crear directorio, Crear archivo                              ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
@@ -172,6 +172,51 @@ int main() {
             }
                 break;
             case 2:
+                int selectj;
+                do {
+                    system("cls");
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"||* * * * * * * * * * * * * * * * Funciones por Julio  * * * * * * * * * * * * * * * * * * ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     1) Leer y escribir archivos de texto                                                ||"<<endl;
+                    cout<<"||     2) Escribir lineas de texto                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     0) Regresar al menu principal                                                       ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"SELECIONA UNA OPCION: ";
+                    cin>>selectj;
+
+                    switch (selectj){
+                        case 1:
+                            system("cls");
+                            leer_escribir_texto();
+                            break;
+
+                        case 2:
+                            system("cls");
+                            escribir_lineas();
+                            break;
+
+                        case 0:
+                            system("cls");
+                            break;
+
+                        default:cout<<"Opcion invalida"<<endl;
+                            system("pause");
+                            break;
+                    }
+
+                }while (selectj!=0);
                 break;
 
             case 3:
