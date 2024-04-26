@@ -14,14 +14,14 @@ int main() {
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR         ||"<<endl;
         cout<<"||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||"<<endl;
+        cout<<"||                                                                                         ||"<<endl;
         cout<<"||     2) Funcion Julio:                                                                   ||"<<endl;
-        cout<<"||     3) Funcion Moreno:                                                                  ||"<<endl;
+        cout<<"||                                                                                         ||"<<endl;
+        cout<<"||     3) Funciones Cayetano: Crear directorio, Crear archivo                              ||"<<endl;
+        cout<<"||                                                                                         ||"<<endl;
         cout<<"||     4) Funciones Miguel: Conversor de monedas (BANGUAT), keylogger                      ||"<<endl;
+        cout<<"||                                                                                         ||"<<endl;
         cout<<"||     0) Exit                                                                             ||"<<endl;
-        cout<<"||                                                                                         ||"<<endl;
-        cout<<"||                                                                                         ||"<<endl;
-        cout<<"||                                                                                         ||"<<endl;
-        cout<<"||                                                                                         ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"============================================================================================="<<endl;
@@ -173,8 +173,58 @@ int main() {
                 break;
             case 2:
                 break;
+
             case 3:
+                int selectC;
+                do {
+                    system("cls");
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"||* * * * * * * * * * * * * * * * Funciones por Cayetano * * * * * * * * * * * * * * * * * ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     1) Crear un Directorio                                                              ||"<<endl;
+                    cout<<"||     2) Crear un Archivo                                                                 ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||     0) Regresar al menu principal                                                       ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"||                                                                                         ||"<<endl;
+                    cout<<"============================================================================================="<<endl;
+                    cout<<"---------------------------------------------------------------------------------------------"<<endl;
+                    cout<<"SELECIONA UNA OPCION: ";
+                    cin>>selectC;
+
+                    switch (selectC){
+                        case 1:
+                            system("cls");
+                            crearCarpeta();
+                        break;
+
+                        case 2:
+                            system("cls");
+                            crearArchivo();
+                        break;
+
+                        case 0:
+                            system("cls");
+                        break;
+
+                        default:cout<<"Opcion invalida"<<endl;
+                            system("pause");
+                        break;
+                    }
+
+
+
+
+                }while (selectC!=0);
                 break;
+
             case 4:
                 int selectM;
                 do{
@@ -204,35 +254,37 @@ int main() {
                         case 1:
                             system("cls");
                             calculadoraGTQ_USD();
-                        break;
+                            break;
 
                         case 2:
                             system("cls");
                             calculadoraUSD_GTQ();
-                        break;
+                            break;
 
                         case 3:
                             system("cls");
                             keylogger();
-                        break;
+                            break;
 
                         case 0:
                             system("cls");
-                        break;
+                            break;
 
                         default:cout<<"Opcion invalida"<<endl;
                         system("pause");
-                        break;
+                            break;
                     }
 
 
                 }while(selectM!=0);
                 break;
-            case 0:
+
+                case 0:
                 cout<<"Saliendo del programa"<<endl;
                 system("pause");
                 break;
-            default:
+
+                default:
                 cout<<"Opccion invalida"<<endl;
                 system("pause");
                 break;
