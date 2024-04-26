@@ -469,6 +469,7 @@ int escribir_lineas() {
         return 1;
     }
 
+    // miguel es guapo
     // Mostrar el contenido del archivo línea por línea
     cout << "Contenido del archivo:" << endl;
     while (getline(archivoEntrada, linea)) {
