@@ -15,7 +15,7 @@ int main() {
         cout<<"||     1) Funciones Carlos:BASE DE DATOS DE CLIENTES USANDO UN LOGIN PARA INGRESAR         ||"<<endl;
         cout<<"||        ENCRIPTACION Y DESENCRIPTACION DEL CONTENIDO DE UN ARCHIVO DE TEXTO              ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
-        cout<<"||     2) Funciones Julio: Leer y escribir textos, escribir lineas de texto                ||"<<endl;
+        cout<<"||     2) Funciones Julio: Leer nombre y edad, escribir lineas de texto                    ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
         cout<<"||     3) Funciones Cayetano: Crear directorio, Crear archivo                              ||"<<endl;
         cout<<"||                                                                                         ||"<<endl;
@@ -199,7 +199,7 @@ int main() {
                     switch (selectj){
                         case 1:
                             system("cls");
-                            leer_escribir_texto();
+                           leer_nombres_Y_edad();
                             break;
 
                         case 2:

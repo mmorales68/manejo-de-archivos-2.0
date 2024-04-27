@@ -407,33 +407,49 @@ void crearArchivo(){
     }
 }
 
-int leer_escribir_texto() {
-    ofstream archivoSalida("archivo.txt");
+struct Persona {
+    string nombre;
+    int edad;
+};
 
+void agregarPersona(ofstream& archivoSalida, const Persona& persona) {
+    archivoSalida << persona.nombre << "," << persona.edad << endl;
+}
+
+void leerPersonas(ifstream& archivoEntrada) {
+    cout << "Contenido del archivo personas.txt:" << endl;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        cout << linea << endl;
+    }
+}
+
+int leer_nombres_Y_edad() {
+    ofstream archivoSalida("personas.txt");
     if (!archivoSalida.is_open()) {
         cout << "Error al abrir el archivo para escritura." << endl;
         return 1;
     }
 
-    archivoSalida << "Hola, este es un archivo de texto." << endl;
-    archivoSalida << "Puedes escribir lo que quieras aquí." << endl;
-    cout << "ingrese el texto" << endl;
-    //archivoSalida.close();
+    Persona persona1 = {"Juan", 25};
+    Persona persona2 = {"María", 30};
 
-    ifstream archivoEntrada("archivo.txt");
+    agregarPersona(archivoSalida, persona1);
+    agregarPersona(archivoSalida, persona2);
 
+    archivoSalida.close();
 
+    // Leer del archivo
+    ifstream archivoEntrada("personas.txt");
     if (!archivoEntrada.is_open()) {
         cout << "Error al abrir el archivo para lectura." << endl;
         return 1;
     }
 
-    string linea;
-    cout << "Contenido del archivo:" << endl;
-    while (archivoEntrada>>linea) {
-        cout << linea << endl;
-    }
-    system("pause");
+    leerPersonas(archivoEntrada);
+
+    archivoEntrada.close();
+
     return 0;
 }
 
